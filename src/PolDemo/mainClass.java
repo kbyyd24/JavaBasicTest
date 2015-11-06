@@ -10,9 +10,13 @@ public class mainClass {
 	
 	public static void upcast() {
 		System.out.println("\nupcast:");
-		superClass sup = new subClass();
+//		superClass sup = new subClass();
+		subClass sub = new subClass();
+		superClass sup = sub;//sup与sub指向相同的地址空间
 		sup.method1();
 		sup.method2();
+		System.out.println(sub);
+		System.out.println(sup);
 	}
 	
 	public static void downcast() {
